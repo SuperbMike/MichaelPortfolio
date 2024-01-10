@@ -16,11 +16,10 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
-//counter
+// counter
 import CountUp from 'react-countup';
 
-
-//  data
+// data
 const aboutData = [
   {
     title: 'skills',
@@ -28,15 +27,15 @@ const aboutData = [
       {
         title: 'Data Engineering',
         icons: [
-          <FaPython />,
-          <FaGit />,
-          <FaMicrosoft />,
-          <FaAws />,
+          <FaPython key="python" />,
+          <FaGit key="git" />,
+          <FaMicrosoft key="microsoft" />,
+          <FaAws key="aws" />,
         ],
       },
       {
         title: 'Data Analyst',
-        icons: [<FaMicrosoft />, <FaPython />, <FaSith />],
+        icons: [<FaMicrosoft key="microsoft" />, <FaPython key="python" />, <FaSith key="sith" />],
       },
     ],
   },
@@ -85,13 +84,11 @@ import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 
 // framer motion
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
-
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
 
   return (
     <div className='h-full bg-primary/30 py-16 text-center xl:text-left'>
@@ -129,7 +126,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:max-w-none mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            10 years ago, I began freelancing as a developer. Since then, I've done remote work for agencies, consulted for startups, and collaborated on digital products for business and consumer use.
+            2 years ago, I began freelancing as a developer. Since then, I've done remote work for agencies, consulted for startups, and collaborated on digital products for business and consumer use.
           </motion.p>
           {/* counter */}
           <motion.div
@@ -164,7 +161,7 @@ const About = () => {
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => (
               <div
-                key={itemIndex}
+                key={itemIndex} // Add key prop here
                 className={`${
                   index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
                 } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
