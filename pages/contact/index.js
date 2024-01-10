@@ -12,6 +12,7 @@ import {motion} from 'framer-motion'
 //variants
 import {fadeIn} from '../../variants';
 
+/* eslint-disable react/no-unescaped-entities */ 
 
 const Contact = () => {
   return (

@@ -16,6 +16,8 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
+/* eslint-disable react/no-unescaped-entities */ 
+
 // counter
 import CountUp from 'react-countup';
 
